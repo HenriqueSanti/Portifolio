@@ -1,0 +1,212 @@
+---
+
+---
+
+<section class="first-project" data-scroll-section>
+    <div class="main container" data-scroll>
+        <div class="content" data-scroll>
+            <div class="project-name" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-20">
+                <h2>UMPERFACE</h2>
+            </div>
+            <div class="project" data-scroll data-scroll-delay="1" data-scroll-speed="2">
+                <img src="https://bestanimations.com/media/shapes/19528138333d-triangle-cone-computer-gif-3.gif" alt="image" class="image">
+                <div class="cover ">
+                    <span class="number ff-sans-title" >
+                        01
+                    </span>
+                    <h4>UMPERFACE</h4>
+                </div>
+            </div>
+            <div class="project-type" data-scroll data-scroll-direction="horizontal" data-scroll-speed="20">
+                <h2>LANDING PAGE</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .first-project {
+        background: hsl(var(--clr-floral-white));
+
+        .container {
+            max-width: 1920px;
+        }
+
+        .main {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .content {
+
+                .project-name, .project-type {
+                    display: none;
+                }
+
+                
+
+
+                .project {
+                    cursor: pointer;
+                    overflow: hidden;
+                    position: relative;
+
+                    .image {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .cover {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        transform: translateY(0);
+                        transition: .2s ease-in-out;
+                        background: linear-gradient(hsl(var(--clr-bone)), hsl(var(--clr-ash-gray)));
+                        display: flex;
+                        align-items: end;
+
+                        .number {
+                            display: none;
+                        }
+                        H4 {
+                            padding: 1rem 2rem;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            mix-blend-mode: difference;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: '768px') {
+        .first-project {
+            height: 100vh;
+            width: 100vw;
+
+            .main {
+                height: 100vh;
+                .content {
+                    height: 70%;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+
+                    .project-name, .project-type {
+                        position: relative;
+                        display: flex;
+                        mix-blend-mode: difference;
+                        justify-content: center;
+
+                        h2 {
+                            position: absolute;
+                            
+                            font-size: var(--fs-900);
+                        }
+                    }
+
+                    .project-name {
+                        align-items: center;
+                        z-index: 10;
+
+                        h2 {
+                            width: 100px;
+                        }
+                    }
+                    .project-type {
+                        justify-content: end;
+                        align-items: end;
+
+                        h2 {
+                            width: 950px;
+                        }
+                    }
+
+
+                    .project {
+
+                        .cover {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 100%;
+                            transform: translateY(0);
+                            transition: .2s ease-in-out;
+                            background: linear-gradient(hsl(var(--clr-bone)), hsl(var(--clr-ash-gray)));
+                            display: flex;
+                            align-items: start;
+
+                            .number {
+                                display: block;
+                                padding: 2rem;
+                                font-size: 6rem;
+                                font-weight: bold;
+                            }
+                            h4 {
+                                display: none;
+                            }
+                        }
+                    } 
+                    .project:hover {
+                        .cover {
+                            transform: translateY(-100%);
+                            opacity: .5;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: '1440px') {
+                    .content {
+                        height: 60%;
+
+                        .project-name, .project-type {
+                            h2 {
+                                font-size: 8rem;
+                            }
+                        }
+
+                        .project-name {
+                            h2 {
+                                width: 100px;
+                            }
+                        }
+                        .project-type {
+                            h2 {
+                                width: 1100px;
+                            }
+                        }
+
+                        @media screen and (min-width: '1920px'){
+                            .project-name, .project-type {
+                                h2 {
+                                    font-size: 9.5rem;
+                                }
+                            }
+
+                            .project-name {
+                                h2 {
+                                    width: 100px;
+                                }
+                            }
+                            .project-type {
+                                h2 {
+                                    width: 1260px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+</style>

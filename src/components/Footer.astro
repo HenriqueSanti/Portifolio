@@ -1,0 +1,107 @@
+---
+
+---
+
+<footer class="footer" data-scroll-section>
+    <div class="container" data-scroll>
+        <span>&copyCopyrights/2022 - Henrique Santi</span>
+        <div class="social">
+            <ul class="social-links">
+                <!-- 
+                <li>
+                    <a href="#">
+                        <img src="images/Dribbble_black.svg" alt="Dribbble">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/Behance_black.svg" alt="Behance">
+                    </a>
+                </li>
+                -->
+                <li>
+                    <a href="https://github.com/HenriqueSanti?tab=repositories">
+                        <img src="images/Github_black.svg" alt="Github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Henrique__Santi">
+                        <img src="images/Twitter_black.svg" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_henriquesanti/">
+                        <img src="images/Instagram_black.svg" alt="Instagran">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC5G7hif7wxo0uBJjKteKKiQ">
+                        <img src="images/Youtube_black.svg" alt="Youtube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    .footer {
+        background-color: hsl(var(--clr-orange-soda));
+        width: 100%;
+        font-family: var(--ff-sans-title);
+
+        
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+            margin: auto;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .social {
+                
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    padding: 0;
+
+                    li {
+                        a {
+                            img {
+                                width: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (min-width: '1024px') {
+        .footer {
+            background-color: hsl(var(--clr-floral-white));
+            .container {
+                flex-direction: row;
+                padding-inline: 2rem;
+                max-width: 1440px;
+                border-top: 2px solid hsl(var(--clr-jet)/1);
+                justify-content: space-between;
+            }
+        }
+    }
+    @media (min-width: '1880px') {
+        .footer {
+            .container {
+                padding-inline: 0;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,108 @@
+---
+
+---
+
+<section class="cta" data-scroll-section>
+    <div class="main" data-scroll>
+        <h2 data-scroll data-scroll-speed="1">LET’S SHOW YOUR AMAZING WORK TO THE WORLD</h2>
+        <button data-scroll data-scroll-speed="1">
+            <a href="https://gukwtiepfvl.typeform.com/to/qzGOruag" class="btn">
+                <span>GET IN TOUCH</span>
+            </a>
+        </button>
+    </div>
+</section>
+
+<style lang="scss">
+   .cta {
+        height: 100vh;
+        background-color: hsl(var(--clr-orange-soda));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            h2 {
+                max-width: 700px;
+                text-align: center;
+                font-size: var(--fs-600);
+                padding-inline: 1rem;
+            }
+            
+            button {
+                border: none;
+                background: transparent;
+                .btn {
+                    font-family: var(--ff-sans-title);
+                    width: 100%;
+                    padding: .8rem;
+                    background-color: hsl(var(--clr-jet));
+                    border: 2px solid hsl(var(--clr-jet));
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+
+                    video {
+                        max-width: 4rem;
+                        border-radius: 100%;
+                    } 
+
+                    span {
+                        color: hsl(var(--clr-floral-white));
+                        font-size: var(--fs-400);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-inline: 1rem;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+            button:hover {
+                background: transparent;
+                .btn {
+                    background-color: hsl(var(--clr-orange-soda));
+                    span {
+                        color: hsl(var(--clr-jet));
+                    }
+                }
+            }
+
+            @media screen and (min-width: '768px'){
+                h2 {
+                    font-size: var(--fs-700);
+                }
+            }
+            @media screen and (min-width: '1440px'){
+                h2 {
+                    max-width: 900px;
+                    font-size: var(--fs-800);
+                }
+                button {
+                    .btn {
+                        padding: 1.4rem;
+                        span {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: '1800px'){
+                button {
+                    .btn {
+                        border-radius: 5rem;
+                    }
+                }
+            }
+        }
+   }
+</style>

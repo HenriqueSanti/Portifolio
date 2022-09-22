@@ -1,0 +1,27 @@
+---
+const works = await Astro.glob('../works/*.md')
+---
+
+{works.map(work => (
+    <div class="works">
+        <div class="work">
+            <a class="project" href={`/${work.frontmatter.slug}`}>
+                <div class="image">
+                    <img src={work.frontmatter.img} alt="">
+                </div>
+                <div class="description">
+                    <h3>{work.frontmatter.title.toUpperCase()}</h3>
+                    <h3>{work.frontmatter.subtitle.toUpperCase()}</h3>
+                </div>
+            </a>    
+        </div> 
+    </div>
+))}
+
+<style lang="scss">
+    .works {
+        display: flex;
+        padding: 4rem;
+        border-bottom: 2px solid hsl(var(--clr-davys-gray));
+    }
+</style>

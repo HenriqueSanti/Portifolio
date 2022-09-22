@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+import Calltoaction from "../components/Calltoaction.astro";
+
+import Footer from "../components/Footer.astro";
+
+const title = 'Contact'
+---
+
+<Layout title={title}>
+	<div class="scroller" data-scroll-container>
+		<Header />
+		<Calltoaction />
+		<Footer />
+	</div>
+	
+</Layout>
+
+<script>
+    import LocomotiveScroll from 'locomotive-scroll';
+
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+		getDirection: true,
+		mobile: {
+			breakpoint: 0,
+			smooth: true,
+		},
+		tablet: {
+			breakpoint: 0,
+			smooth: true
+		}
+    });
+</script>

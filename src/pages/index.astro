@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero-home.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import Calltoaction from "../components/Calltoaction.astro";
+import Faq from "../components/Faq.astro";
+import Footer from "../components/Footer.astro";
+import Why from "../components/Why.astro";
+
+const title = 'Henrique Santi'
+---
+
+<Layout title={title}>
+	<div class="scroller" data-scroll-container>
+		<Header />
+		<Hero />
+		<Why />
+		<Projects />
+		<About />
+		<Calltoaction />
+		<Faq />
+		<Footer />
+	</div>
+	
+</Layout>
+
+
+
+<script>
+    import LocomotiveScroll from 'locomotive-scroll';
+
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+		getDirection: true,
+		mobile: {
+			breakpoint: 0,
+			smooth: true,
+		},
+		tablet: {
+			breakpoint: 0,
+			smooth: true
+		}
+    });
+</script>

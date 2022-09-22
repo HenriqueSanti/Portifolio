@@ -1,0 +1,83 @@
+---
+
+---
+
+<div id="why" class="why" data-scroll-section >
+    <div class="container" data-scroll>
+        <div class="content" data-scroll-speed="0.1">
+            <div class="bio">
+                <h2>DEAR VISITOR</h2>
+                <p>
+                    I know you need a website that truly represents your brand, that tells your brand story and turns your customers into fans. To create the best user experience, your website needs to bring together the best design and development practices. And it's to help you on this journey that I'm here, below you'll see some of my projects and a little more about me.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .why {
+        height: 100vh;
+        widows: 100%;
+        background-color: hsl(var(--clr-jet));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding-inline: 1.2rem;
+            
+            .bio {
+
+                h2 {
+                    color: hsl(var(--clr-orange-soda));
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                    color: hsl(var(--clr-floral-white));
+                }
+            }
+            
+        }
+
+        @media screen and (min-width: '768px') {
+            .content {
+                display: flex;
+                flex-direction: row;
+                max-width: 700px;
+                padding-inline: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: '1024px') {
+        .why {
+            height: 60vh;
+            justify-content: end;
+            align-items: center;
+            .content {
+                max-width: 900px;
+            }
+        }
+    }
+    @media screen and (min-width: '1440px') {
+        .why {
+            .content {
+                max-width: 1280px;
+
+                .bio {
+                    margin-bottom: 4rem;
+                    h2 {
+                    margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: var(--fs-500);
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -1,0 +1,142 @@
+---
+
+---
+
+<section class="cta" data-scroll-section>
+    <div class="main" data-scroll>
+        <h2 data-scroll data-scroll-speed="1">HAVE A PROJECT? LET’S WORK TOGETHER</h2>
+        <button data-scroll data-scroll-speed="1">
+            <div class="btn">
+                <span>GET IN TOUCH</span>
+            </div>
+        </button>
+    </div>
+</section>
+
+<style lang="scss">
+   .cta {
+        height: 100vh;
+        background-color: hsl(var(--clr-orange-soda));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            h2 {
+                max-width: 700px;
+                text-align: center;
+                font-size: var(--fs-600);
+                padding-inline: 1rem;
+            }
+            
+            button {
+                border: none;
+                background: transparent;
+                .btn {
+                    font-family: var(--ff-sans-title);
+                    width: 100%;
+                    padding: .8rem;
+                    background-color: hsl(var(--clr-jet));
+                    border: 2px solid hsl(var(--clr-jet));
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    transition: .3s ease-in-out; 
+
+                    span {
+                        color: hsl(var(--clr-floral-white));
+                        font-size: var(--fs-400);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-inline: 1rem;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+            button:hover {
+                background: transparent;
+                .btn {
+                    background-color: hsl(var(--clr-orange-soda));
+                    span {
+                        color: hsl(var(--clr-jet));
+                    }
+                }
+            }
+        }
+   }
+   @media screen and (min-width: '768px'){
+        .cta {
+            .main {
+                h2 {
+                    font-size: var(--fs-700);
+                }
+            }
+        }
+    }
+    @media screen and (min-width: '1024px'){
+        .cta {
+            background-color: hsl(var(--clr-floral-white));
+            padding-inline: 2rem;
+            .main {
+                width: 900px;
+                background-color: hsl(var(--clr-jet));
+                padding: 4rem;
+
+                h2 {
+                    color: hsl(var(--clr-floral-white));
+                }
+                button {
+                    .btn {
+                        background-color: transparent;
+                        border: 2px solid hsl(var(--clr-floral-white));
+                        color: hsl(var(--clr-floral-white));
+                    }
+                }
+                button:hover {
+                    .btn {
+                        border: 2px solid hsl(var(--clr-orange-soda));
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: '1366px'){
+        .cta {
+            .main {
+                width: 1200px;
+                h2 {
+                    max-width: 900px;
+                    font-size: var(--fs-800);
+                }
+                button {
+                    .btn {
+                        padding: 1.4rem;
+                        span {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: '1800px'){
+        .cta {
+            .main {
+                button {
+                    .btn {
+                        border-radius: 5rem;
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -1,0 +1,222 @@
+---
+
+---
+
+<section class="faq" data-scroll-section>
+    <div class="main container" data-scroll>
+        <h2 data-scroll data-scroll-speed="1">FREQUENT QUESTIONS</h2>
+        <div class="content" data-scroll data-scroll-speed="2">
+            <div class="card" data-scroll>
+                <span data-scroll data-scroll-delay="1" data-scroll-speed="2">01</span>
+                <div class="question">
+                    <h4>I want to follow the project closely, what do I do?</h4>
+                    <p>That's the idea, we will have an exclusive channel within the Notion app so that we can reach the next level together</p>
+                </div>
+                <div class="theme">
+                    <h3>PROCESS</h3>
+                </div>
+            </div>
+            <div class="card" data-scroll>
+                <span  data-scroll data-scroll-delay="0.9" data-scroll-speed="1.9">02</span>
+                <div class="question">
+                    <h4>How long will it take for the project to be ready?</h4>
+                    <p>On average 20 to 40 working days Depending on the size and difficulty of the project</p>
+                </div>
+                <div class="theme">
+                    <h3>DEADLINES</h3>
+                </div>
+            </div>
+            <div class="card" data-scroll>
+                <span  data-scroll data-scroll-delay="0.8" data-scroll-speed="1.8">03</span>
+                <div class="question">
+                    <h4>How many revisions can I make during or at the end of the project?</h4>
+                    <p>The client has the possibility to review it once at the end of each stage of the project. The next step will only start upon approval of the current step</p>
+                </div>
+                <div class="theme">
+                    <h3>REVISIONS</h3>
+                </div>
+            </div>
+            <div class="card" data-scroll>
+                <span  data-scroll data-scroll-delay="0.7" data-scroll-speed="1.7">04</span>
+                <div class="question">
+                    <h4>How much does a website cost?</h4>
+                    <p>A MILLION! Well, that's an amount you can earn from a website. But creating and maintaining will cost much less than that. Again, it depends on the size and difficulty of the project. Don't be afraid, <a href="/contact">let's talk :)</a></p>
+                </div>
+                <div class="theme">
+                    <h3>PRICE</h3>
+                </div>
+            </div>
+            <div class="card" data-scroll>
+                <span  data-scroll data-scroll-delay="0.6" data-scroll-speed="1.6">05</span>
+                <div class="question">
+                    <h4>How is payment made?</h4>
+                    <p>Payment occurs in 2 installments, one at the beginning of the project and another at the end, and can be paid by credit card or bank transfer.</p>
+                </div>
+                <div class="theme">
+                    <h3>PAYMENT</h3>
+                </div>
+            </div>
+            <div class="card" data-scroll>
+                <span  data-scroll data-scroll-delay="0.5" data-scroll-speed="1.5">06</span>
+                <div class="question">
+                    <h4>And how does delivery occur?</h4>
+                    <p>At the end of the project I will upload the website for hosting and deliver the access to the client, I will also deliver the prototypes. All steps will be delivered within our Notion channel.</p>
+                </div>
+                <div class="theme">
+                    <h3>DELIVERY</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .faq {
+        display: none;
+    }
+    @media screen and (min-width: '1024px') {
+        .faq {
+            display: flex;
+            background-color: hsl(var(--clr-floral-white));
+            padding-inline: 2rem;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                width: 100%;
+                max-width: 1440px;
+
+                h2 {
+                    font-size: var(--fs-700);
+                }
+                .content {
+                    display: flex;
+                    width: 100%;
+                    gap: 2rem;
+                    box-sizing: border-box;
+
+                    .card {
+                        display: flex;
+                        flex: 1;
+                        gap: 1rem;
+                        background-color: transparent;
+                        border: 2px solid hsl(var(--clr-jet));
+                        padding: .8rem;
+                        transition: .3s ease-in-out;
+                        height: 20rem;
+                        box-sizing: border-box;
+                        cursor: default;
+
+                        span {
+                            font-family: var(--ff-sans-title);
+                            background-color: hsl(var(--clr-jet));
+                            color: hsl(var(--clr-floral-white));
+                            padding: .8rem;
+                            height: 3.2rem;
+                            width: 3.2rem;
+                            border-radius: 100%;
+                            font-size: var(--fs-400);
+                        }
+                        .question {
+                            width: 0;
+
+                            h4, p, p a {
+                                color: transparent;
+                                transition-delay: .2s;
+                                transition-property: color;
+                                transition-duration: .3s;
+                            }
+                        }
+                        .theme {
+                            transform: rotate(-90deg);
+                            height:0;
+                            width: 0;
+                            align-self: flex-end;
+                            padding: 0 0 2.8rem 0;
+                            h3 {
+                                font-size: var(--fs-500);
+                            }
+                        }
+                    }
+                    .card:hover {
+                        flex: 4;
+                        background: hsl(var(--clr-jet));
+                        
+                        span {
+                            color: hsl(var(--clr-orange-soda));
+                        }
+
+                        .question {
+                            width: 100%;
+                            h4, p, p a {
+                                transition-delay: 0;
+                                transition-property: color;
+                                transition-duration: 0;
+                            }   
+                            h4 {
+                                color: hsl(var(--clr-floral-white));
+                                font-size: 1.4rem;
+                                margin-bottom: .6rem;
+                            }
+                            p {
+                                color: hsl(var(--clr-bone));
+                                a {
+                                    color: hsl(var(--clr-orange-soda));
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .theme {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+        @media screen and (min-width: '1440px') {
+            .faq {
+                .main {
+
+                    h2 {
+                        font-size: var(--fs-800);
+                    }
+                    .content {
+
+                        .card {
+                            height: 28rem;
+                            
+                            .theme {
+                                
+                                padding: 0 0 1rem 0;
+                                h3 {
+                                    font-size: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: '1880px') {
+            .faq {
+                .main {
+                    .content {
+                        .card {
+                            .theme {
+                                padding: 0 0 1rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    
+
+</style>

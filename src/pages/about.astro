@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header-two.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+
+const title = 'About me'
+---
+
+<Layout title={title}>
+	<div class="scroller" data-scroll-container>
+		<Header />
+		<Hero />
+		<Footer />
+	</div>
+	
+</Layout>
+
+<style lang="scss">
+	
+
+</style>
+
+<script>
+    import LocomotiveScroll from 'locomotive-scroll';
+
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+		getDirection: true,
+		mobile: {
+			breakpoint: 0,
+			smooth: true,
+		},
+		tablet: {
+			breakpoint: 0,
+			smooth: true
+		}
+    });
+</script>
