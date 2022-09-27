@@ -3,7 +3,7 @@
 ---
 
 <section id="hero" class="hero" data-scroll-section>
-    <div class="background-gradient" data-scroll data-scroll-speed="-6" data-scroll-target="#hero">
+    <div class="background-gradient" data-scroll  data-scroll-target="#hero">
         
             <div class="main" data-scroll data-scroll-sticky>
                 <h1 data-scroll data-scroll-speed="2">I'M READY TO CREATE AWESOME WEB EXPERIENCES, FROM DESIGN TO CODE!</h1>
@@ -36,7 +36,7 @@
             position: absolute;
             height: 100vh;
             width: 100vw;
-            background: hsl(var(--clr-floral-white));       
+            background-image: hsl(var(--clr-jet));       
         
             .main {
                 height: 100%;
@@ -45,12 +45,15 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0 auto ;
+                z-index: -100;
 
 
                 h1 {
                     font-size: 2.4em;
                     text-align: center;
                     z-index: -100;
+                    color: hsl(var(--clr-floral-white));
+                    mix-blend-mode: difference;
                 }
 
                 button {
@@ -92,9 +95,23 @@
                 }
                 
                 .img {
-                    img {
-                        display: none;
-                    }
+                    max-width: 300px;
+                        img {
+                            display: block;
+                            max-width: 300px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -60%) rotate(12deg);
+                            z-index: -110;
+                        }
+                        img.image {
+                            display: none;
+                        }
+                        img.cover {
+                            transition: .3s ease-in-out;
+                        }
+                    
                 }
             }
         }
@@ -111,7 +128,7 @@
                 position: absolute;
                 height: 100vh;
                 width: 100vw;
-                //background-image: linear-gradient(hsl(var(--clr-bone)), hsl(var(--clr-ash-gray)));
+                background-image: hsl(var(--clr-jet));
                 background-size: cover;        
                 
                 .main {
