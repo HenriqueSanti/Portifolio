@@ -13,13 +13,18 @@
                 </div>
 
                 <div class="scroll-down">
-                    <p class="bubble">SCROLL DOWN</p>
+                    <span class="bubble">SCROLL DOWN</span>
                 </div>
             </div>
             <div class="located">
-                Creative Web Developer
+                CREATIVE WEB DEVELOPER
                 <br>
-                Located in Brazil
+                LOCATED IN BRAZIL
+            </div>
+            <div class="contact">
+                LET'S CHAT
+                <br>
+                <span>- henriquesanti.dev@gmail.com</span>
             </div>
     </div>
 </section>
@@ -83,14 +88,19 @@
                     left: 50%;
                     transform: translate(-50%, -40%);
 
-                    p {
+                    .bubble {
                         color: hsl(var(--clr-jet));
                         text-align: center;
+                        font-size: var(--fs-200);
                     }
                 }
             }
 
             .located {
+                display: none;
+                
+            }
+            .contact {
                 display: none;
                 
             }
@@ -180,12 +190,24 @@
                 }
 
                 .located {
-                    color: hsl(var(--clr-jet));
-                    font-family: var(--ff-sans-text);
+                    color: hsl(var(--clr-davys-gray) / .5);
+                    font-family: var(--ff-sans-title);
+                    font-size: var(--fs-200);
                     position: absolute;
                     bottom: 8%;
-                    right: 82.4%;
+                    right: 83%;
                     display: block;
+                }
+                .contact {
+                    color: hsl(var(--clr-davys-gray) / .5);
+                    font-family: var(--ff-sans-title);
+                    font-size: var(--fs-200);
+                    position: absolute;
+                    bottom: 8%;
+                    left: 80.2%;
+                    display: block;
+                    text-align: end;
+                    border-bottom: 2px solid hsl(var(--clr-melon));
                 }
                 
                 /*
@@ -205,7 +227,10 @@
         .hero {
             .background-gradient {
                 .located {
-                    right: 84.2%;
+                    right: 84.8%;
+                }
+                .contact {
+                    left: 82.2%;
                 }
             }
         }
@@ -237,7 +262,10 @@
                     }
                 }
                 .located {
-                    right: 87.4%;
+                    right: 88%;
+                }
+                .contact {
+                    left: 85.8%;
                 }
                 /*
                 .main:hover {
@@ -256,6 +284,9 @@
             .background-gradient {
                 .located {
                     right: 78%;
+                }
+                .contact {
+                    left: 76.4%;
                 }
             }
         }

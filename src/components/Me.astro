@@ -2,41 +2,30 @@
 
 ---
 
-<section id="hero" class="hero" data-scroll-section>
-    <div class="background-gradient" data-scroll  data-scroll-target="#hero">
+<section id="hero" class="me" data-scroll-section>
+    <div class="main" data-scroll data-scroll-sticky>
+        <div class="name" data-scroll data-scroll-direction="horizontal" data-scroll-dalay="0.8" data-scroll-speed="4">
+            <h2 >HENRIQUE SANTI</h2>
+        </div>
+        <h3 data-scroll data-scroll-speed="2">I'M READY TO CREATE AWESOME WEB EXPERIENCES, FROM DESIGN TO CODE!</h3>
         
-            <div class="main" data-scroll data-scroll-sticky>
-                <h1 data-scroll data-scroll-speed="2">I'M READY TO CREATE AWESOME WEB EXPERIENCES, FROM DESIGN TO CODE!</h1>
-                <button data-scroll data-scroll-speed="2">
-                    <div class="btn">
-                        <video src="https://player.vimeo.com/external/576755436.sd.mp4?s=8282fc11ce770645fcba953bf1b64274c5ecd365&profile_id=165&oauth2_token_id=57447761" autoplay></video>
-                        <span>GET IN TOUCH</span>
-                    </div>
-                </button>
-                <div class="img">
-                    <img src="https://bestanimations.com/media/shapes/19528138333d-triangle-cone-computer-gif-3.gif" alt="image" class="image">
-                    <img src="images/henrique-santi.webp" alt="henrique-santi" class="cover">
-                </div>
-            </div>
-        
+        <div class="img">
+            <img src="https://bestanimations.com/media/shapes/19528138333d-triangle-cone-computer-gif-3.gif" alt="image" class="image">
+            <img src="images/henrique-santi.webp" alt="henrique-santi" class="cover">
+        </div>
     </div>
 </section>
 
 <style lang="scss">
 
-    .hero {
+    .me {
         height: 100vh;
         width: 100%;
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
-
-        .background-gradient {
-            position: absolute;
-            height: 100vh;
-            width: 100vw;
-            background-image: hsl(var(--clr-jet));       
+        background-color: hsl(var(--clr-jet));       
         
             .main {
                 height: 100%;
@@ -45,54 +34,34 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0 auto ;
-                z-index: -100;
-
-
-                h1 {
+                z-index: -10000;
+                .name {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: -1000;
+                    h2 {
+                        font-size: 20rem;
+                        color: hsl(var(--clr-davys-gray) / .2);
+                        width: 4000px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -20%);
+                        z-index: -210;
+                    }
+                }
+                h3 {
                     font-size: 2.4em;
                     text-align: center;
                     z-index: -100;
-                    color: hsl(var(--clr-floral-white));
-                    mix-blend-mode: difference;
+                    color: hsl(var(--clr-orange-soda));
+                    mix-blend-mode: luminosity;
+                    margin-bottom: 5rem;
                 }
 
-                button {
-                    border: none;
-                    background: transparent;
-                    .btn {
-                        font-family: var(--ff-sans-title);
-                        width: 100%;
-                        padding: .8rem;
-                        background-color: hsl(var(--clr-jet));
-                        
-                        display: flex;
-                        justify-content: space-between;
-                        border-radius: 3rem;
-                        cursor: pointer;
-                        transition: .3s ease-in-out;
-
-                        video {
-                            max-width: 4rem;
-                            border-radius: 100%;
-                        } 
-
-                        span {
-                            color: hsl(var(--clr-floral-white));
-                            font-size: var(--fs-400);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin-inline: 1rem;
-                        }
-                    }
-                }
-                button:hover {
-                    background: transparent;
-                    .btn {
-                        background-color: hsl(var(--clr-orange-soda));
-                        color: hsl(var(--clr-jet));
-                    }
-                }
+                
                 
                 .img {
                     max-width: 300px;
@@ -114,7 +83,7 @@
                     
                 }
             }
-        }
+    
     }
 
     
@@ -122,44 +91,20 @@
     
 
     @media (min-width: '768px') {
-        .hero {
-
-            .background-gradient {
-                position: absolute;
-                height: 100vh;
-                width: 100vw;
-                background-image: hsl(var(--clr-jet));
-                background-size: cover;        
-                
+        .me {           
                 .main {
                     width: 700px;
                     align-items: center;
-                    cursor: pointer;
                     
-                    h1 {
-                        position: absolute;
+                    h3 {
+                        
                         width: 700px;
                         font-size: var(--fs-700);
-                        mix-blend-mode: difference;
                     }
-
-                    button {
-                        display: none;
-                    }
-
                     .img {
                         max-width: 300px;
                         img {
-                            display: block;
                             max-width: 300px;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%) rotate(12deg);
-                            z-index: -110;
-                        }
-                        img.image {
-                            height: 400px;
                         }
                         img.cover {
                             transition: .3s ease-in-out;
@@ -167,26 +112,24 @@
                     }
                 }
 
-                .main:hover {
+                /*.main:hover {
                     .img {
                         img.cover {
                             max-width: 280px;
                             opacity: 0;
                         }
                     }
-                }
-            
-            }
+                }*/
         }
     } 
 
     @media (min-width: '1440px') {
-        .hero {
-            .background-gradient {
+        .me {
+            
                 .main {
                     max-width: 900px;
                     
-                    h1 {
+                    h3 {
                         width: 900px;
                         font-size: 4.2rem;
                     
@@ -211,17 +154,16 @@
                         }
                     }
                 }
-            }
         }
     }
 
     @media (min-width: '1860px') {
-        .hero {
-            .background-gradient {
+        .me {
+           
                 .main {
                     max-width: 1200px;
                     
-                    h1 {
+                    h3 {
                         width: 1200px;
                         font-size: var(--fs-800);
                     
@@ -247,7 +189,7 @@
                         }
                     }
                 }
-            }
+            
         }
     }
 
