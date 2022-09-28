@@ -24,7 +24,7 @@
             <div class="contact">
                 LET'S CHAT
                 <br>
-                <span>- henriquesanti.dev@gmail.com</span>
+                <a href="mailto:henriquesanti.dev@gmail.com">* henriquesanti.dev@gmail.com</a>
             </div>
     </div>
 </section>
@@ -121,11 +121,10 @@
                 background-size: cover;        
                 
                 .main {
-                    width: 700px;
+                    width: 768px;
                     justify-content: center;
                     align-items: center;
                     gap: 0;
-                    cursor: default;
                     
                     h1 {
                         position: absolute;
@@ -144,6 +143,27 @@
                             transform: translate(-50%, -50%) rotate(12deg);
                             z-index: -110;
                         }
+                    }
+
+                    .located {
+                        color: hsl(var(--clr-davys-gray) / .5);
+                        font-family: var(--ff-sans-title);
+                        font-size: var(--fs-200);
+                        position: absolute;
+                        bottom: 88%;
+                        right: 80%;
+                        display: block;
+                    }
+                    .contact {
+                        color: hsl(var(--clr-davys-gray) / .5);
+                        font-family: var(--ff-sans-title);
+                        font-size: var(--fs-200);
+                        position: absolute;
+                        bottom: 8%;
+                        left: 78%;
+                        display: block;
+                        text-align: end;
+                        border-bottom: 2px solid hsl(var(--clr-melon));
                     }
 
                 }
@@ -167,7 +187,7 @@
         .hero {
             .background-gradient {
                 .main {
-                    max-width: 900px;
+                    max-width: 1366px;
                     
                     h1 {
                         width: 900px;

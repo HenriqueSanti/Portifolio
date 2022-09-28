@@ -15,6 +15,8 @@ const title = 'Henrique Santi'
 
 <Layout title={title}>
 	<div class="scroller" data-scroll-container>
+		<div class="innerCursor"></div>
+		<div class="outerCursor"></div>
 		<Header />
 		<Hero />
 		<Why />
@@ -46,4 +48,31 @@ const title = 'Henrique Santi'
 			smooth: true
 		}
     });
+
+	let innerCursor = document.querySelector('.innerCursor')
+	let outerCursor = document.querySelector('.outerCursor')
+
+	document.addEventListener('mousemove', moveCursor) 
+
+	function moveCursor(e) {
+		let x = e.clientX
+		let y= e.clientY
+
+		innerCursor.style.left = `${x}px`
+		innerCursor.style.top = `${y}px`
+		outerCursor.style.left = `${x}px`
+		outerCursor.style.top = `${y}px`
+	}
+
+	let hovereds = Array.from(document.querySelectorAll("a, .hamburger"))
+
+	hovereds.forEach(hovered => {
+		hovered.addEventListener("mouseover", () => {
+			innerCursor.classList.add('grow')
+		})
+		hovered.addEventListener("mouseleave", () => {
+			innerCursor.classList.remove('grow')
+		})
+	})
+	
 </script>

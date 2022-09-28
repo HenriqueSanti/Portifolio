@@ -22,6 +22,8 @@ const { Content, frontmatter } = Astro.props.work
 ---
 
 <Layout title={frontmatter.title}>
+    <div class="innerCursor"></div>
+	<div class="outerCursor"></div>
     <Header />
     <section class="work-name">
         <div class="work-title">
@@ -87,3 +89,31 @@ const { Content, frontmatter } = Astro.props.work
 	}
 	
 </style>
+
+<script>
+    let innerCursor = document.querySelector('.innerCursor')
+	let outerCursor = document.querySelector('.outerCursor')
+
+	document.addEventListener('mousemove', moveCursor) 
+
+	function moveCursor(e) {
+		let x = e.clientX
+		let y= e.clientY
+
+		innerCursor.style.left = `${x}px`
+		innerCursor.style.top = `${y}px`
+		outerCursor.style.left = `${x}px`
+		outerCursor.style.top = `${y}px`
+	}
+
+	let hovereds = Array.from(document.querySelectorAll("a, .hamburger"))
+
+	hovereds.forEach(hovered => {
+		hovered.addEventListener("mouseover", () => {
+			innerCursor.classList.add('grow')
+		})
+		hovered.addEventListener("mouseleave", () => {
+			innerCursor.classList.remove('grow')
+		})
+	})
+</script>

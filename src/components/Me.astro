@@ -4,7 +4,7 @@
 
 <section id="hero" class="me" data-scroll-section>
     <div class="main" data-scroll data-scroll-sticky>
-        <div class="name" data-scroll data-scroll-direction="horizontal" data-scroll-dalay="0.8" data-scroll-speed="4">
+        <div class="name" data-scroll data-scroll-direction="horizontal" data-scroll-dalay="4" data-scroll-speed="6">
             <h2 >HENRIQUE SANTI</h2>
         </div>
         <h3 data-scroll data-scroll-speed="2">I'M READY TO CREATE AWESOME WEB EXPERIENCES, FROM DESIGN TO CODE!</h3>
@@ -42,13 +42,13 @@
                     justify-content: center;
                     z-index: -1000;
                     h2 {
-                        font-size: 20rem;
+                        font-size: 14rem;
                         color: hsl(var(--clr-davys-gray) / .2);
-                        width: 4000px;
+                        width: 2000px;
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -20%);
+                        transform: translate(-50%, 2%);
                         z-index: -210;
                     }
                 }
@@ -64,10 +64,10 @@
                 
                 
                 .img {
-                    max-width: 300px;
+                    max-width: 260px;
                         img {
                             display: block;
-                            max-width: 300px;
+                            max-width: 260px;
                             position: absolute;
                             top: 50%;
                             left: 50%;
@@ -95,6 +95,24 @@
                 .main {
                     width: 700px;
                     align-items: center;
+
+                    .name {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: -1000;
+                        h2 {
+                            font-size: 20rem;
+                            color: hsl(var(--clr-davys-gray) / .2);
+                            width: 4000px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -20%);
+                            z-index: -210;
+                        }
+                    }
                     
                     h3 {
                         
@@ -123,11 +141,29 @@
         }
     } 
 
-    @media (min-width: '1440px') {
+    @media (min-width: '1366px') {
         .me {
             
                 .main {
                     max-width: 900px;
+
+                    .name {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: -1000;
+                        h2 {
+                            font-size: 20rem;
+                            color: hsl(var(--clr-davys-gray) / .2);
+                            width: 4000px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -8%);
+                            z-index: -210;
+                        }
+                    }
                     
                     h3 {
                         width: 900px;
@@ -141,27 +177,42 @@
                         img {
                             max-width: 360px;
                         }
-                        img.image {
-                            display: block;
-                            height: 460px;
-                        }
-                    }
-                }
-                .main:hover {
-                    .img {
-                        img.cover {
-                            max-width: 340px;
-                        }
+                        
                     }
                 }
         }
     }
 
-    @media (min-width: '1860px') {
+    @media (min-width: '1536px') {
+        .me {
+            .main {
+                .name {
+                    h2 {
+                        font-size: 24rem;
+                        width: 5000px;
+                        left: 20%;
+                        transform: translate(-50%, -14%);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: '1920px') {
         .me {
            
                 .main {
                     max-width: 1200px;
+
+                    .name {
+                        
+                        h2 {
+                            font-size: 26rem;
+                            width: 10000px;
+                            left: 20%;
+                            transform: translate(-20%, -10%);
+                        }
+                    }
                     
                     h3 {
                         width: 1200px;
@@ -176,19 +227,10 @@
                         img {
                             max-width: 420px;
                         }
-                        img.image {
-                            display: block;
-                            height: 560px;
-                        }
+                        
                     }
                 }
-                .main:hover {
-                    .img {
-                        img.cover {
-                            max-width: 400px;
-                        }
-                    }
-                }
+                
             
         }
     }
