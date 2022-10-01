@@ -138,12 +138,34 @@ const works = await Astro.glob('../works/*.md')
             }
         }
     }
+
+    @media screen and (min-width: '360px') {
+        .projects {
+            height: 240vh;
+        }
+    }
+
+    @media screen and (min-width: '390px') {
+        .projects {
+            height: 180vh;
+
+            .container {
+                padding: 0;
+            }
+        }
+    }
     @media screen and (min-width: '768px'){
          .projects {
             height: 120vh;
             
             .container {
                 gap: 0;
+
+                .work-head {
+                    h2 {
+                        padding-inline: 1rem;
+                    }
+                }
                 .project {
                     width: 700px;
                     flex-direction: row;

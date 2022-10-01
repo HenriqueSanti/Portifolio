@@ -17,33 +17,51 @@
 
 <style lang="scss">
     .why {
-        height: 100vh;
-        widows: 100%;
+        
         background-color: hsl(var(--clr-jet));
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        
+    }
 
-        .content {
+    @media screen and (min-width: '360px') {
+        .why {
+            justify-content: start;
+            height: 110vh;
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding-inline: .4rem;
+                    
+                .bio {
+
+                    h2 {
+                        color: hsl(var(--clr-orange-soda));
+                        margin-bottom: 1rem;
+                        margin-top: 2rem;
+                    }
+                    p {
+                        font-size: 1.5rem;
+                        color: hsl(var(--clr-floral-white));
+                    }
+                }
+                    
+            }
+        }
+    }
+
+    @media screen and (min-width: '390px') {
+        .why {
+            height: 80vh;
+            widows: 100%;
+            background-color: hsl(var(--clr-jet));
             display: flex;
             flex-direction: column;
-            padding-inline: 1.2rem;
-            
-            .bio {
-
-                h2 {
-                    color: hsl(var(--clr-orange-soda));
-                    margin-bottom: 1rem;
-                }
-                p {
-                    font-size: 1.5rem;
-                    color: hsl(var(--clr-floral-white));
-                }
-            }
-            
+            justify-content: center;
         }
-
-        @media screen and (min-width: '768px') {
+    }
+    @media screen and (min-width: '768px') {
+        .why {
             .content {
                 display: flex;
                 flex-direction: row;
