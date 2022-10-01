@@ -17,7 +17,10 @@
 </section>
 
 <style lang="scss">
-
+    .me {
+        display: none;
+    }
+    /*
     .me {
         height: 100vh;
         width: 100%;
@@ -134,22 +137,35 @@
                     }
                 }
 
-                /*.main:hover {
+                .main:hover {
                     .img {
                         img.cover {
                             max-width: 280px;
                             opacity: 0;
                         }
                     }
-                }*/
+                
         }
-    } 
+    } */
 
     @media (min-width: '1366px') {
         .me {
-            
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: hsl(var(--clr-jet));
                 .main {
                     max-width: 900px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto ;
+                    z-index: -10000;
 
                     .name {
                         position: relative;
@@ -172,6 +188,11 @@
                     h3 {
                         width: 900px;
                         font-size: 4.2rem;
+                        text-align: center;
+                        z-index: -100;
+                        color: hsl(var(--clr-orange-soda));
+                        mix-blend-mode: luminosity;
+                        margin-bottom: 5rem;
                     
                     }
 
@@ -180,6 +201,12 @@
                         max-width: 360px;
                         img {
                             max-width: 360px;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -60%) rotate(12deg);
+                            z-index: -110;
                         }
                         
                     }
