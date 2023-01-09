@@ -14,45 +14,19 @@ const title = 'Henrique Santi'
 ---
 
 <Layout title={title}>
-	<div class="scroller" data-scroll-container>
-		<!--
-			<div class="innerCursor"></div>
-			<div class="outerCursor"></div>
-		 -->
-		
 		<Header />
-		<Hero />
+		<Me />
 		<Why />
 		<Projects />
-		<Me />
 		<About />
 		<Calltoaction />
 		<Faq />
 		<Footer />
-	</div>
-	
 </Layout>
 
 
 <script>
-    import LocomotiveScroll from 'locomotive-scroll';
-
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-		getDirection: true,
-		mobile: {
-			breakpoint: 0,
-			smooth: true,
-			getDirection: true,
-		
-		},
-		tablet: {
-			breakpoint: 0,
-			smooth: true,
-			getDirection: true,
-		}
-    });
+    
 
 	/*
 	let innerCursor = document.querySelector('.innerCursor')
