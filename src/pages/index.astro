@@ -15,8 +15,11 @@ const title = 'Henrique Santi'
 
 <Layout title={title}>
 	<div class="scroller" data-scroll-container>
-		<div class="innerCursor"></div>
-		<div class="outerCursor"></div>
+		<!--
+			<div class="innerCursor"></div>
+			<div class="outerCursor"></div>
+		 -->
+		
 		<Header />
 		<Hero />
 		<Why />
@@ -51,6 +54,7 @@ const title = 'Henrique Santi'
 		}
     });
 
+	/*
 	let innerCursor = document.querySelector('.innerCursor')
 	let outerCursor = document.querySelector('.outerCursor')
 
@@ -65,7 +69,7 @@ const title = 'Henrique Santi'
 		outerCursor.style.left = `${x}px`
 		outerCursor.style.top = `${y}px`
 	}
-
+	
 	let hovereds = Array.from(document.querySelectorAll("a, .hamburger"))
 
 	hovereds.forEach(hovered => {
@@ -76,5 +80,5 @@ const title = 'Henrique Santi'
 			innerCursor.classList.remove('grow')
 		})
 	})
-	
+	*/
 </script>
