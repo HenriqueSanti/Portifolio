@@ -7,7 +7,7 @@ const title = 'About me'
 ---
 
 <Layout title={title}>
-	<div class="scroller" data-scroll-container>
+	<div class="scroller">
 		<Header />
 		<Footer />
 	</div>
@@ -20,19 +20,5 @@ const title = 'About me'
 </style>
 
 <script>
-    import LocomotiveScroll from 'locomotive-scroll';
-
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-		getDirection: true,
-		mobile: {
-			breakpoint: 0,
-			smooth: true,
-		},
-		tablet: {
-			breakpoint: 0,
-			smooth: true
-		}
-    });
+    
 </script>
